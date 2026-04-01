@@ -222,6 +222,9 @@ A personal OS must be available when you need it, not when your network is. Ever
 
 ---
 
+
 ## License
 
-MIT
+Copyright (c) 2024-2026 Diego Perez Garcia. All rights reserved.
+
+This repository is published for **portfolio and evaluation purposes only**. You may view and read the contents to evaluate the author's technical capabilities. Copying, modifying, distributing, or using any part of this codebase for any purpose is prohibited without explicit written permission. See [LICENSE](LICENSE) for full terms.
