@@ -1,0 +1,28 @@
+services:
+  goalos-web:
+    container_name: goalos-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL:-http://host.docker.internal:54321}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY:-your-local-anon-key}
+        VITE_AI_PROVIDER: ${VITE_AI_PROVIDER:-ollama}
+        VITE_AI_API_BASE_URL: ${VITE_AI_API_BASE_URL:-}
+        VITE_OLLAMA_BASE_URL: ${VITE_OLLAMA_BASE_URL:-/ollama}
+        VITE_OLLAMA_MODEL: ${VITE_OLLAMA_MODEL:-qwen3.5:2b}
+    ports:
+      - "127.0.0.1:${GOALOS_PORT:-3000}:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - default
+      - auth-proxy_default
+    restart: unless-stopped
+
+networks:
+  auth-proxy_default:
+    external: true
+
+  default:
+    name: objectives_default

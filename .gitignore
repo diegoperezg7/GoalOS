@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+tailwind.config.js
+tailwind.config.d.ts
+.env
+.env.local
+.env*.local
+.DS_Store
+.gstack/
+.agents/
+.factory/
+.expect/
+.claude/

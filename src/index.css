@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: 220 41% 8%;
+  --foreground: 210 40% 96%;
+  --card: 222 35% 12%;
+  --card-foreground: 210 40% 96%;
+  --popover: 221 34% 14%;
+  --popover-foreground: 210 40% 96%;
+  --primary: 175 89% 44%;
+  --primary-foreground: 216 33% 10%;
+  --secondary: 223 24% 18%;
+  --secondary-foreground: 210 40% 96%;
+  --muted: 222 24% 18%;
+  --muted-foreground: 215 16% 72%;
+  --accent: 37 96% 58%;
+  --accent-foreground: 220 43% 10%;
+  --border: 218 24% 22%;
+  --input: 222 24% 17%;
+  --ring: 175 89% 44%;
+  --success: 191 100% 50%;
+  --warning: 39 95% 56%;
+  --danger: 0 84% 63%;
+  --info: 196 90% 52%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  @apply min-h-screen bg-background font-sans text-foreground antialiased;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(circle at top left, rgba(22, 163, 143, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.16), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(251, 113, 133, 0.12), transparent 25%),
+    linear-gradient(180deg, #07111f 0%, #0b1325 52%, #09111d 100%);
+}
+
+#root {
+  @apply min-h-screen;
+  min-height: 100dvh;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.28);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-[-0.03em];
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+@layer components {
+  .app-shell-grid {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02), transparent 22%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 16%);
+  }
+
+  .glass-card {
+    @apply rounded-[24px] border border-white/10 bg-white/[0.04] shadow-card backdrop-blur-xl sm:rounded-3xl;
+  }
+
+  .story-card {
+    @apply glass-card relative overflow-hidden;
+  }
+
+  .story-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 45%);
+    pointer-events: none;
+  }
+
+  .subtle-grid {
+    background-image: theme("backgroundImage.grid-pattern");
+    background-size: 24px 24px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (min-width: 768px) {
+  @layer base {
+    input,
+    textarea,
+    select {
+      font-size: 14px;
+    }
+  }
+}

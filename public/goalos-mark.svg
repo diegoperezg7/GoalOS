@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 108 360 360" fill="none">
+  <defs>
+    <radialGradient id="goalos-cyan-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(215 330) rotate(63.4) scale(150 172)">
+      <stop stop-color="#2DEBFF" stop-opacity=".9"/>
+      <stop offset=".45" stop-color="#12B7FF" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#12B7FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goalos-gold-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(344 274) rotate(116.2) scale(128 144)">
+      <stop stop-color="#FFE45E" stop-opacity=".9"/>
+      <stop offset=".4" stop-color="#FFC526" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#FFC526" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goalos-ring-stroke" x1="128" y1="358" x2="401" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3BDBFF"/>
+      <stop offset=".42" stop-color="#18B5FF"/>
+      <stop offset=".72" stop-color="#23E0E0"/>
+      <stop offset="1" stop-color="#FFE45E"/>
+    </linearGradient>
+    <linearGradient id="goalos-arc-fill" x1="177" y1="314" x2="343" y2="203" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5D8"/>
+      <stop offset=".52" stop-color="#1689FF"/>
+      <stop offset="1" stop-color="#FFE12F"/>
+    </linearGradient>
+    <linearGradient id="goalos-arrow-fill" x1="162" y1="342" x2="426" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09233A"/>
+      <stop offset=".48" stop-color="#0B2E4D"/>
+      <stop offset="1" stop-color="#0B5B79"/>
+    </linearGradient>
+    <linearGradient id="goalos-arrow-edge" x1="144" y1="359" x2="430" y2="149" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1AD8FF"/>
+      <stop offset=".45" stop-color="#1E88FF"/>
+      <stop offset="1" stop-color="#FFE55C"/>
+    </linearGradient>
+    <filter id="goalos-soft-glow" x="70" y="108" width="372" height="338" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+    <filter id="goalos-sharp-glow" x="98" y="124" width="344" height="278" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#goalos-soft-glow)">
+    <ellipse cx="213" cy="329" rx="118" ry="72" fill="url(#goalos-cyan-glow)"/>
+    <ellipse cx="340" cy="279" rx="92" ry="82" fill="url(#goalos-gold-glow)"/>
+  </g>
+
+  <g filter="url(#goalos-sharp-glow)" opacity=".72">
+    <path d="M138 365C154 410 210 435 287 429C354 423 402 394 418 349" stroke="#5CEEFF" stroke-width="9" stroke-linecap="round"/>
+    <path d="M145 355C165 387 218 406 286 401C347 396 390 372 405 339" stroke="#FFE55C" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <path d="M139 361C159 411 216 440 295 433C366 426 414 392 425 338" stroke="url(#goalos-ring-stroke)" stroke-width="16" stroke-linecap="round"/>
+  <path d="M161 300C160 227 213 170 287 170C317 170 347 180 372 197" stroke="url(#goalos-ring-stroke)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M177 306C179 246 224 201 283 201C307 201 329 209 348 222" stroke="url(#goalos-arc-fill)" stroke-width="34" stroke-linecap="butt" stroke-opacity=".82"/>
+  <path d="M196 300C201 257 233 227 276 227C290 227 305 230 318 237" stroke="url(#goalos-arc-fill)" stroke-width="22" stroke-linecap="butt" stroke-opacity=".72"/>
+
+  <path
+    d="M139 362L272 255L318 272L352 244L338 234L405 185L380 267L363 252L328 287L286 270L218 326L139 362Z"
+    fill="url(#goalos-arrow-fill)"
+  />
+  <path
+    d="M139 362L272 255L318 272L352 244L338 234L405 185L380 267L363 252L328 287L286 270L218 326L139 362Z"
+    stroke="url(#goalos-arrow-edge)"
+    stroke-width="4"
+    stroke-linejoin="round"
+  />
+
+  <path d="M171 342L212 309V360L171 377V342Z" fill="#12334D" fill-opacity=".96" stroke="#1D5E82" stroke-width="3"/>
+  <path d="M220 303L255 274V337L220 353V303Z" fill="#12334D" fill-opacity=".96" stroke="#1D5E82" stroke-width="3"/>
+  <path d="M262 269L295 242V311L262 326V269Z" fill="#12334D" fill-opacity=".96" stroke="#1D5E82" stroke-width="3"/>
+
+  <circle cx="367" cy="217" r="6" fill="#E5FEFF"/>
+  <circle cx="214" cy="292" r="5" fill="#E5FEFF"/>
+  <circle cx="303" cy="211" r="3.5" fill="#E5FEFF"/>
+  <circle cx="384" cy="244" r="4" fill="#FFF6B3"/>
+
+  <g opacity=".8">
+    <rect x="345" y="161" width="14" height="14" rx="3" fill="#23E0E0"/>
+    <rect x="369" y="148" width="19" height="19" rx="3" fill="#25D9FF"/>
+    <rect x="394" y="139" width="11" height="11" rx="3" fill="#1A88FF"/>
+    <rect x="412" y="126" width="8" height="8" rx="2.5" fill="#1A88FF"/>
+  </g>
+</svg>
